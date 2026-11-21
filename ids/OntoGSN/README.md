@@ -20,6 +20,7 @@ The ontology has been created by Tomas Bueno Momčilović, scientific researcher
 | `/ontology/core`, `/pattern`, `/modular`, `/confidence`, `/dialectic` | the ontology cut by section of the GSN standard, Turtle |
 | `/shapes`, `/shapes/{section}` | the SHACL shapes, Turtle |
 | `/augmentation`, `/augmentation/shapes`, `/alignment` | the augmentation, its shapes and the alignment, Turtle |
+| `/augmentation/{x.y.z}` | the augmentation at the git tag `augmentation-v{x.y.z}`, Turtle. A new version needs no new rule |
 | `/design`, `/design/{data,queries,augmentations}`, `/alignment/design`, `/augmentation/design` | the design record, Turtle |
 | `/playground` | the playground on the website |
 

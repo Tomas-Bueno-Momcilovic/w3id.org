@@ -1,6 +1,7 @@
 # OntoGSN
 # Ontology: https://w3id.org/OntoGSN/ontology redirects to content negotiated (ttl/jsonld/rdf+xml)
 # Version:  https://w3id.org/OntoGSN/ontology/{x.y.z} redirects to the same files at the git tag v{x.y.z}
+#           https://w3id.org/OntoGSN/augmentation/{x.y.z} redirects to the augmentation at the git tag augmentation-v{x.y.z}
 # Homepage: https://w3id.org/OntoGSN redirects to https://fortiss.github.io/OntoGSN/
 # Any other path answers 404.
 
@@ -63,6 +64,8 @@ RewriteRule ^shapes/dialectic/?$ https://raw.githubusercontent.com/fortiss/OntoG
 
 # --- Augmentation and alignment, Turtle only ---
 RewriteRule ^augmentation/?$ https://raw.githubusercontent.com/fortiss/OntoGSN/main/augmentation/ontogsn-augmentation.ttl [R=303,L]
+# one version of the augmentation (owl:versionIRI): the file at the git tag augmentation-v{x.y.z}
+RewriteRule ^augmentation/([0-9]+\.[0-9]+\.[0-9]+)/?$ https://raw.githubusercontent.com/fortiss/OntoGSN/augmentation-v$1/augmentation/ontogsn-augmentation.ttl [R=303,L]
 RewriteRule ^augmentation/shapes/?$ https://raw.githubusercontent.com/fortiss/OntoGSN/main/augmentation/shapes/ontogsn-augmentation-shapes.ttl [R=303,L]
 RewriteRule ^alignment/?$ https://raw.githubusercontent.com/fortiss/OntoGSN/main/alignments/ontogsn-align.ttl [R=303,L]
 
